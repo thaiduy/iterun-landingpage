@@ -5,7 +5,8 @@
       "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"animation aurora glassmorphism accessibility\" --domain ux && python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"landing hero cta app download\" --domain landing)",
       "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"AI running fitness app landing page minimal clean dark\" --design-system -p \"Iterun\")",
       "Bash(python3 .claude/skills/ui-ux-pro-max/scripts/search.py \"landing page hero cta minimal\" --domain landing -n 3)",
-      "Bash(file /Users/thaiduynguyen/Projects/Iterun-group/iterun-landingpage/assets/img_scnsht_*.png | head -3)"
+      "Bash(file /Users/thaiduynguyen/Projects/Iterun-group/iterun-landingpage/assets/img_scnsht_*.png | head -3)",
+      "Bash(git add:*)"
     ]
   }
 }
