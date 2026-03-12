@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffaa28"/>
+      <stop offset="100%" stop-color="#ff4420"/>
+    </linearGradient>
+    <clipPath id="round">
+      <rect width="100" height="100" rx="22" ry="22"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+
+  <!-- Running figure (silhouette) -->
+  <g clip-path="url(#round)" fill="#1a0800" opacity="0.88">
+    <!-- head -->
+    <circle cx="62" cy="22" r="7"/>
+    <!-- body / torso -->
+    <path d="M57 30 Q52 42 48 50 Q54 48 60 50 Q64 42 62 30 Z"/>
+    <!-- front arm (reaching forward) -->
+    <path d="M60 34 Q68 30 74 26 Q72 24 70 25 Q65 29 58 36 Z"/>
+    <!-- back arm (behind) -->
+    <path d="M56 36 Q48 40 42 44 Q43 46 45 45 Q51 41 58 38 Z"/>
+    <!-- front leg (extended forward) -->
+    <path d="M50 50 Q44 60 38 70 Q36 76 40 78 Q42 76 42 72 Q47 63 54 52 Z"/>
+    <!-- back leg (pushing off) -->
+    <path d="M58 50 Q63 60 66 68 Q68 74 72 72 Q72 68 70 66 Q66 58 62 48 Z"/>
+  </g>
+</svg>
