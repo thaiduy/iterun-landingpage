@@ -11,10 +11,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ── Tokens ── */
 :root {
-    /* brand */
-    --accent:        #3b82f6;
-    --accent-hover:  #2563eb;
-    --accent-glow:   rgba(59, 130, 246, 0.25);
+    /* brand — matches app icon gradient (golden orange → red-orange) */
+    --accent:        #ff6b30;
+    --accent-hover:  #e8521a;
+    --accent-glow:   rgba(255, 107, 48, 0.25);
+    --accent-start:  #ffaa28;
+    --accent-end:    #ff4420;
+    --accent-gradient: linear-gradient(135deg, var(--accent-start), var(--accent-end));
 
     /* typography */
     --font: 'Inter', system-ui, sans-serif;
@@ -32,7 +35,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ── Light theme ── */
 [data-theme="light"] {
     --bg:          #f9fafb;
-    --bg-alt:      #f0f4ff;
+    --bg-alt:      #fff8f5;
     --surface:     #ffffff;
     --surface-2:   #f3f4f6;
     --border:      #e5e7eb;
@@ -49,7 +52,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ── Dark theme ── */
 [data-theme="dark"] {
     --bg:          #050a14;
-    --bg-alt:      #080f1e;
+    --bg-alt:      #100a06;
     --surface:     #0d1526;
     --surface-2:   #111d33;
     --border:      rgba(255,255,255,0.08);
@@ -171,11 +174,12 @@ body {
 .btn:active { transform: scale(0.97); }
 
 .btn-primary {
-    background: var(--accent);
+    background: var(--accent-gradient);
     color: #fff;
 }
 .btn-primary:hover {
-    background: var(--accent-hover);
+    background: var(--accent-gradient);
+    filter: brightness(1.08);
     box-shadow: 0 0 0 4px var(--accent-glow);
 }
 
@@ -226,20 +230,20 @@ body {
 .aurora-blob-1 {
     width: 560px; height: 560px;
     top: -80px; left: -120px;
-    background: radial-gradient(circle, rgba(59,130,246,0.35) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,170,40,0.3) 0%, transparent 70%);
     animation: float1 14s ease-in-out infinite;
 }
 .aurora-blob-2 {
     width: 480px; height: 480px;
     bottom: -60px; right: -100px;
-    background: radial-gradient(circle, rgba(139,92,246,0.28) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,68,32,0.25) 0%, transparent 70%);
     animation: float2 18s ease-in-out infinite;
 }
 .aurora-blob-3 {
     width: 400px; height: 400px;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,107,48,0.12) 0%, transparent 70%);
     animation: float3 22s ease-in-out infinite;
 }
 
@@ -254,17 +258,17 @@ body {
 .daylight-blob-1 {
     width: 600px; height: 600px;
     top: -100px; left: -150px;
-    background: radial-gradient(circle, rgba(186,230,253,0.6) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,200,100,0.45) 0%, transparent 70%);
 }
 .daylight-blob-2 {
     width: 500px; height: 500px;
     bottom: -80px; right: -120px;
-    background: radial-gradient(circle, rgba(196,181,253,0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,120,60,0.3) 0%, transparent 70%);
 }
 .daylight-blob-3 {
     width: 400px; height: 400px;
     top: 40%; left: 55%;
-    background: radial-gradient(circle, rgba(167,243,208,0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,160,40,0.2) 0%, transparent 70%);
 }
 
 @keyframes float1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(30px,-30px)} }
@@ -292,7 +296,7 @@ body {
     padding: 6px 14px;
     border-radius: 999px;
     background: var(--accent-glow);
-    border: 1px solid rgba(59,130,246,0.35);
+    border: 1px solid rgba(255,107,48,0.35);
     color: var(--accent);
     font-size: 13px;
     font-weight: 600;
@@ -426,8 +430,8 @@ body {
     cursor: default;
 }
 .feature-card:hover {
-    border-color: rgba(59,130,246,0.4);
-    box-shadow: 0 4px 24px rgba(59,130,246,0.08);
+    border-color: rgba(255,107,48,0.4);
+    box-shadow: 0 4px 24px rgba(255,107,48,0.08);
 }
 
 .feature-icon {
@@ -494,7 +498,7 @@ body {
    CTA BANNER
    ============================================================ */
 .cta-banner {
-    background: var(--accent);
+    background: var(--accent-gradient);
     padding-block: 80px;
 }
 
